@@ -1,0 +1,15 @@
+#!/bin/bash
+
+d=$HOME/.tools
+if [ ! -d "$d" ]; then
+	mkdir .tools
+fi
+f1=cln
+if [ -f "$f1" ]; then
+	mv cln $d/cln
+	echo "export PATH=\$PATH\":\$HOME/.tools\"" >> ~/.profile
+	chmod +x $d/cln
+	. ~/.profile
+	echo "Installation completed successfully!"
+	echo "To use cln hit: cln [repo_url]"
+fi

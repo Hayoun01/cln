@@ -1,0 +1,21 @@
+#!/bin/bash
+FILE=$HOME/.tools/TOKEN
+key=a
+if [ -f "$FILE" ] && [ "$1" != "-ch" ]; then
+	key=$(cat $FILE)
+else
+	s=${#key}
+	while [ $s -lt 40 ]
+	do
+		read -p "Enter your token: " key
+		s=${#key}
+	done
+	if [ $s -ge 40 ]; then
+		echo $key > $FILE
+	fi
+fi
+
+if [ ! -z "$1" ]; then
+	url=$(echo $1| cut -c 9-${#1})
+	echo $(git clone https://$key@$url)
+fi
