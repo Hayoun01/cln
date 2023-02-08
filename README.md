@@ -3,7 +3,7 @@ Usually when you try to clone a repo with a token you must put the token everyti
 
 You can install it with one line command:
 
-`git clone https://github.com/Hayoun01/cln-tools.git; cd cln-tools; chmod +x ins; ins`
+`git clone https://github.com/Hayoun01/cln-tools.git; cd cln-tools; chmod +x ins; ./ins`
 
 Then: 
 `cln repo_url`
