@@ -3,10 +3,12 @@ Usually when you try to clone a repo with a token you must put the token everyti
 
 You can install it with one line command:
 
-`git clone https://github.com/Hayoun01/cln-tools.git; cd cln-tools; chmod +x ins; ./ins`
+```sh
+git clone https://github.com/Hayoun01/cln-tools.git; cd cln-tools; chmod +x ins; ./ins
+```
 
-Then: 
-`cln repo_url`
+Then:
+```cln repo_url```
 
 It will ask you for the token for the first time only then you can clone any repo without token.
 
