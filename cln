@@ -1,6 +1,14 @@
 #!/bin/bash
 FILE=$HOME/.tools/TOKEN
 key=a
+if [ "$1" == "-p" ]; then
+	if [ ! -z "$2" ]; then
+		git add .
+		git commit -m "$2"
+		git push
+	fi
+	exit
+fi
 if [ -f "$FILE" ] && [ "$1" != "-ch" ]; then
 	key=$(cat $FILE)
 else
